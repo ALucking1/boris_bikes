@@ -44,3 +44,12 @@ describe DockingStation do
     end
   end
 end
+
+describe DockingStation do
+  it 'does not accept more bikes than capacity' do
+      docking_station = DockingStation.new
+      if docking_station.dock(1) == 1
+      expect{docking_station.dock(1)}.to raise_error('Cannot dock bike')
+    end
+  end
+end
