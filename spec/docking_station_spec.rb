@@ -35,3 +35,12 @@ describe DockingStation do
     expect(subject.bike).to eq bike
   end
 end
+
+describe DockingStation do
+  it 'only releases available bikes' do
+    docking_station = DockingStation.new
+    if docking_station.bike == 0
+    expect{docking_station.release_bike}.to raise_error('No bikes')
+    end
+  end
+end
