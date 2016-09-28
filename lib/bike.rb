@@ -1,11 +1,8 @@
 class Bike
-  @working = true
-  def working?
-    if @working = true
-      return true
-    elsif @working = false
-      return false
-    end
+  def initialize
   end
 
+  def working?
+    true
+  end
 end
